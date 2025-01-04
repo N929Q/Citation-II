@@ -231,13 +231,14 @@
 		</hovered>
 	</animation>
 
-<!-- Panel Lights (only with Rembrandt disabled) -->
+<!-- Panel Lights (only for quality-level=0) -->
 	<animation>
 		<type>material</type>
 		<condition>
-			<not>
-				<property>/sim/rendering/rembrandt/enabled</property>
-			</not>
+			<equals>
+				<property>/sim/rendering/shaders/quality-level</property>
+				<value>0</value>
+			</equals>
 		</condition>
 		<object-name>ralt.bezel</object-name>
 		<object-name>ralt.dh.off</object-name>
@@ -252,7 +253,6 @@
 	</animation>
 
 <!-- Instrument Lights -->
-<!-- Implement emis animation even for Rembrandt rendering! -->
 	<animation>
 		<type>material</type>
 		<object-name>ralt.bug</object-name>
@@ -263,18 +263,17 @@
 			<red>1.0</red>
 			<green>0.8</green>
 			<blue>0.6</blue>
-			<factor-prop>controls/lighting/flightdeck-average-instrument-emission</factor-prop>
+			<factor-prop>controls/lighting/instrument-light-emission</factor-prop>
 		</emission>
 	</animation>
 
 	<effect>
-		<condition>
-			<greater-than>
-				<property>/sim/version/flightgear</property>
-				<value>3.4.999</value>
-			</greater-than>
-		</condition>
-		<inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>ralt.glass</object-name>
+	</effect>
+
+	<!--effect>
+		<inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
 		<object-name>ralt.bezel</object-name>
 		<object-name>ralt.bug</object-name>
 		<object-name>ralt.dh.off</object-name>
@@ -283,11 +282,6 @@
 		<object-name>ralt.knob</object-name>
 		<object-name>ralt.needle</object-name>
 		<object-name>ralt.test</object-name>
-	</effect>
-
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>ralt.glass</object-name>
-	</effect>
+	</effect-->
 
 </PropertyList>

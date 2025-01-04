@@ -392,5 +392,47 @@ Autopilot Controller
     <object-name>ap.yd.btn</object-name>
     <object-name>ap.low.btn</object-name>
   </effect>
+<!-- Simulate ambient light from panel lights (only for quality-level=0) -->
+    <animation>
+        <type>material</type>
+        <condition>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <object-name>bezel</object-name>
+        <object-name>pitch-wheel</object-name>
+        <object-name>turn-knob</object-name>
+        <object-name>engage.btn</object-name>
+        <object-name>engage.btn.off</object-name>
+        <object-name>yaw-damper.btn</object-name>
+        <object-name>yaw-damper.btn.off</object-name>
+        <object-name>low-bank.btn</object-name>
+        <object-name>low-bank.btn.off</object-name>
+        <object-name>soft-ride.btn</object-name>
+        <object-name>soft-ride.btn.off</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/flightdeck-average-ambient-light-center-console</factor-prop>
+        </emission>
+    </animation>
+
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+        <object-name>bezel</object-name>
+        <object-name>pitch-wheel</object-name>
+        <object-name>turn-knob</object-name>
+        <object-name>engage.btn</object-name>
+        <object-name>engage.btn.off</object-name>
+        <object-name>yaw-damper.btn</object-name>
+        <object-name>yaw-damper.btn.off</object-name>
+        <object-name>low-bank.btn</object-name>
+        <object-name>low-bank.btn.off</object-name>
+        <object-name>soft-ride.btn</object-name>
+        <object-name>soft-ride.btn.off</object-name>
+    </effect-->
 
 </PropertyList>

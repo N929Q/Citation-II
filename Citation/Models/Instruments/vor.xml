@@ -86,64 +86,58 @@
     </axis>
   </animation>
 
-<!-- Panel Lights (only with Rembrandt disabled) -->
-  <animation>
-    <type>material</type>
-    <condition>
-      <not>
-        <property>/sim/rendering/rembrandt/enabled</property>
-      </not>
-    </condition>
-    <object-name>vor.bezel</object-name>
-    <object-name>vor.marker</object-name>
-    <emission>
-      <red>1.0</red>
-      <green>0.8</green>
-      <blue>0.6</blue>
-      <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
-    </emission>
-  </animation>
+<!-- Panel Lights (only for quality-level=0) -->
+    <animation>
+        <type>material</type>
+        <condition>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <object-name>vor.bezel</object-name>
+        <object-name>vor.marker</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
+        </emission>
+    </animation>
 
 <!-- Instrument Lights -->
-<!-- Implement emis animation even for Rembrandt rendering! -->
-  <animation>
-    <type>material</type>
-    <object-name>vor.face</object-name>
-    <object-name>vor.flag.off</object-name>
-    <object-name>vor.flag.from</object-name>
-    <object-name>vor.flag.to</object-name>
-    <object-name>vor.needle.gs</object-name>
-    <object-name>vor.needle.loc</object-name>
-    <emission>
-      <red>1.0</red>
-      <green>0.8</green>
-      <blue>0.6</blue>
-      <factor-prop>controls/lighting/flightdeck-average-instrument-emission</factor-prop>
-    </emission>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>vor.face</object-name>
+        <object-name>vor.flag.off</object-name>
+        <object-name>vor.flag.from</object-name>
+        <object-name>vor.flag.to</object-name>
+        <object-name>vor.needle.gs</object-name>
+        <object-name>vor.needle.loc</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
+        </emission>
+    </animation>
 
-  <effect>
-    <condition>
-      <greater-than>
-        <property>/sim/version/flightgear</property>
-        <value>3.4.999</value>
-      </greater-than>
-    </condition>
-    <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
-    <object-name>vor.bezel</object-name>
-    <object-name>vor.face</object-name>
-    <object-name>vor.flag.off</object-name>
-    <object-name>vor.flag.from</object-name>
-    <object-name>vor.flag.to</object-name>
-    <object-name>vor.marker</object-name>
-    <object-name>vor.needle.gs</object-name>
-    <object-name>vor.needle.loc</object-name>
-  </effect>
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>vor.glass</object-name>
+    </effect>
 
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>vor.glass</object-name>
-  </effect>
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+        <object-name>vor.bezel</object-name>
+        <object-name>vor.face</object-name>
+        <object-name>vor.flag.off</object-name>
+        <object-name>vor.flag.from</object-name>
+        <object-name>vor.flag.to</object-name>
+        <object-name>vor.marker</object-name>
+        <object-name>vor.needle.gs</object-name>
+        <object-name>vor.needle.loc</object-name>
+    </effect-->
 
 </PropertyList>
 

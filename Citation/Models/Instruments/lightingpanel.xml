@@ -252,7 +252,7 @@
   <animation>
     <type>knob</type>
     <object-name>lighting.el.knob</object-name>
-    <property>controls/lighting/instrument-lights-norm</property>
+    <property>controls/lighting/instrument-light-norm</property>
     <factor>300</factor>
     <center>
       <x-m>0.0045</x-m>
@@ -267,7 +267,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/lighting/instrument-lights-norm</property>
+        <property>controls/lighting/instrument-light-norm</property>
         <factor>0.02</factor>
         <min>0.0</min>
         <max>1.0</max>
@@ -280,7 +280,7 @@
         <tooltip-id>lights-instruments</tooltip-id>
         <label>Instrument lights: %d%%</label>
         <mapping>percent</mapping>
-        <property>controls/lighting/instrument-lights-norm</property>
+        <property>controls/lighting/instrument-light-norm</property>
       </binding>
     </hovered>
   </animation>
@@ -525,33 +525,34 @@
     </hovered>
   </animation>
 
-<!-- Panel Lights (only with Rembrandt disabled) -->
-  <animation>
-    <type>material</type>
-    <condition>
-      <not>
-        <property>/sim/rendering/rembrandt/enabled</property>
-      </not>
-    </condition>
-    <object-name>lighting.panel</object-name>
-    <object-name>lighting.flood.knob</object-name>
-    <object-name>lighting.left.knob</object-name>
-    <object-name>lighting.center.knob</object-name>
-    <object-name>lighting.right.knob</object-name>
-    <object-name>lighting.el.knob</object-name>
-    <object-name>lighting.light.sw</object-name>
-    <object-name>lighting.stdbygyro.sw</object-name>
-    <object-name>lighting.passenger.sw</object-name>
-    <object-name>lighting.beacon.sw</object-name>
-    <object-name>lighting.landing.left.sw</object-name>
-    <object-name>lighting.landing.right.sw</object-name>
-    <emission>
-      <red>1.0</red>
-      <green>0.8</green>
-      <blue>0.6</blue>
-      <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
-    </emission>
-  </animation>
+<!-- Panel Lights (only for =0) -->
+    <animation>
+        <type>material</type>
+        <condition>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <object-name>lighting.panel</object-name>
+        <object-name>lighting.flood.knob</object-name>
+        <object-name>lighting.left.knob</object-name>
+        <object-name>lighting.center.knob</object-name>
+        <object-name>lighting.right.knob</object-name>
+        <object-name>lighting.el.knob</object-name>
+        <object-name>lighting.light.sw</object-name>
+        <object-name>lighting.stdbygyro.sw</object-name>
+        <object-name>lighting.passenger.sw</object-name>
+        <object-name>lighting.beacon.sw</object-name>
+        <object-name>lighting.landing.left.sw</object-name>
+        <object-name>lighting.landing.right.sw</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
+        </emission>
+    </animation>
 
 <!-- Lightmap
   <effect>
@@ -563,43 +564,37 @@
   </effect>
 -->
 <!-- Chrome Effect! -->
-  <effect>
-    <condition>
-      <not>
-        <property>/sim/rendering/shaders/skydome</property>
-        <value>1</value>
-      </not>
-    </condition>
-    <inherits-from>Aircraft/Citation/Models/Effects/citationII-chrome-interior</inherits-from>
-    <object-name>lighting.light.sw</object-name>
-    <object-name>lighting.stdbygyro.sw</object-name>
-    <object-name>lighting.passenger.sw</object-name>
-    <object-name>lighting.beacon.sw</object-name>
-    <object-name>lighting.landing.left.sw</object-name>
-    <object-name>lighting.landing.right.sw</object-name>
-  </effect>
+    <effect>
+        <condition>
+            <not>
+                <property>/sim/rendering/shaders/skydome</property>
+                <value>1</value>
+            </not>
+        </condition>
+        <inherits-from>Aircraft/Citation/Models/Effects/chrome-flightdeck</inherits-from>
+        <object-name>lighting.light.sw</object-name>
+        <object-name>lighting.stdbygyro.sw</object-name>
+        <object-name>lighting.passenger.sw</object-name>
+        <object-name>lighting.beacon.sw</object-name>
+        <object-name>lighting.landing.left.sw</object-name>
+        <object-name>lighting.landing.right.sw</object-name>
+    </effect>
 
-  <effect>
-    <condition>
-      <greater-than>
-        <property>/sim/version/flightgear</property>
-        <value>3.4.999</value>
-      </greater-than>
-    </condition>
-    <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
-    <object-name>lighting.panel</object-name>
-    <object-name>lighting.flood.knob</object-name>
-    <object-name>lighting.left.knob</object-name>
-    <object-name>lighting.center.knob</object-name>
-    <object-name>lighting.right.knob</object-name>
-    <object-name>lighting.el.knob</object-name>
-    <object-name>lighting.light.sw</object-name>
-    <object-name>lighting.stdbygyro.sw</object-name>
-    <object-name>lighting.passenger.sw</object-name>
-    <object-name>lighting.beacon.sw</object-name>
-    <object-name>lighting.landing.left.sw</object-name>
-    <object-name>lighting.landing.right.sw</object-name>
-  </effect>
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+        <object-name>lighting.panel</object-name>
+        <object-name>lighting.flood.knob</object-name>
+        <object-name>lighting.left.knob</object-name>
+        <object-name>lighting.center.knob</object-name>
+        <object-name>lighting.right.knob</object-name>
+        <object-name>lighting.el.knob</object-name>
+        <object-name>lighting.light.sw</object-name>
+        <object-name>lighting.stdbygyro.sw</object-name>
+        <object-name>lighting.passenger.sw</object-name>
+        <object-name>lighting.beacon.sw</object-name>
+        <object-name>lighting.landing.left.sw</object-name>
+        <object-name>lighting.landing.right.sw</object-name>
+    </effect-->
 
 </PropertyList>
 

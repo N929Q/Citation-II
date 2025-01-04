@@ -1038,13 +1038,14 @@ the centers are:
         <object-name>ctl92.bezel</object-name>
     </animation>
 
-<!-- Panel Lights (only with Rembrandt disabled) -->
+<!-- Panel Lights (only for quality-level=0) -->
     <animation>
         <type>material</type>
         <condition>
-            <not>
-                <property>/sim/rendering/rembrandt/enabled</property>
-            </not>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
         </condition>
         <object-name>ctl92.bezel</object-name>
         <object-name>ctl92.metal</object-name>
@@ -1059,7 +1060,6 @@ the centers are:
     </animation>
 
 <!-- Instrument Lights -->
-<!-- Implement emis animation even for Rembrandt rendering! -->
     <animation>
         <condition>
             <and>
@@ -1082,7 +1082,7 @@ the centers are:
             <red>0.8</red>
             <green>0.8</green>
             <blue>0.7</blue>
-            <factor-prop>controls/lighting/flightdeck-average-instrument-emission</factor-prop>
+            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
         </emission>
     </animation>
 
@@ -1091,8 +1091,8 @@ the centers are:
         <object-name>ctl92.glass</object-name>
     </effect>
 
-    <effect>
-        <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
         <object-name>ctl92.bezel</object-name>
         <object-name>ctl92.metal</object-name>
         <object-name>ctl92.pwr</object-name>
@@ -1103,6 +1103,6 @@ the centers are:
         <object-name>ctl92.btn.pre</object-name>
         <object-name>ctl92.btn.ident</object-name>
         <object-name>ctl92.btn.test</object-name>
-    </effect>
+    </effect-->
 
 </PropertyList>

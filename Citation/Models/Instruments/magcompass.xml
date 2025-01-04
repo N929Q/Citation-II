@@ -16,61 +16,55 @@ Citation magnetic compass
     </axis>
   </animation>
 
-  <!-- Panel Lights (only with Rembrandt disabled) -->
-  <animation>
-    <type>material</type>
-    <condition>
-      <not>
-        <property>/sim/rendering/rembrandt/enabled</property>
-      </not>
-    </condition>
-    <object-name>magcompass.housing</object-name>
-    <object-name>magcompass.holding</object-name>
-    <object-name>magcompass.white</object-name>
-    <object-name>magcompass.red1</object-name>
-    <object-name>magcompass.red2</object-name>
-    <emission>
-      <red>1.0</red>
-      <green>0.8</green>
-      <blue>0.6</blue>
-      <factor-prop>controls/lighting/flightdeck-average-ambient-light-environment</factor-prop>
-    </emission>
-  </animation>
+<!-- Panel Lights (only for quality-level=0) -->
+    <animation>
+        <type>material</type>
+        <condition>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <object-name>magcompass.housing</object-name>
+        <object-name>magcompass.holding</object-name>
+        <object-name>magcompass.white</object-name>
+        <object-name>magcompass.red1</object-name>
+        <object-name>magcompass.red2</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/flightdeck-average-ambient-light-environment</factor-prop>
+        </emission>
+    </animation>
 
-  <!-- Instrument Lights -->
-  <!-- Implement emis animation even for Rembrandt rendering! -->
-  <animation>
-    <type>material</type>
-    <object-name>magcompass.rose</object-name>
-    <object-name>magcompass.sight</object-name>
-    <emission>
-      <red>1</red>
-      <green>0.8</green>
-      <blue>0.6</blue>
-      <factor-prop>controls/lighting/flightdeck-average-instrument-emission</factor-prop>
-    </emission>
-  </animation>
+<!-- Instrument Lights -->
+    <animation>
+        <type>material</type>
+        <object-name>magcompass.rose</object-name>
+        <object-name>magcompass.sight</object-name>
+        <emission>
+            <red>1</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
+        </emission>
+    </animation>
 
-  <effect>
-    <condition>
-      <greater-than>
-        <property>/sim/version/flightgear</property>
-        <value>3.4.999</value>
-      </greater-than>
-    </condition>
-    <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
-    <object-name>magcompass.housing</object-name>
-    <object-name>magcompass.holding</object-name>
-    <object-name>magcompass.rose</object-name>
-    <object-name>magcompass.sight</object-name>
-    <object-name>magcompass.white</object-name>
-    <object-name>magcompass.red1</object-name>
-    <object-name>magcompass.red2</object-name>
-  </effect>
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>magcompass.glass</object-name>
+    </effect>
 
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>magcompass.glass</object-name>
-  </effect>
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+        <object-name>magcompass.housing</object-name>
+        <object-name>magcompass.holding</object-name>
+        <object-name>magcompass.rose</object-name>
+        <object-name>magcompass.sight</object-name>
+        <object-name>magcompass.white</object-name>
+        <object-name>magcompass.red1</object-name>
+        <object-name>magcompass.red2</object-name>
+    </effect-->
 
 </PropertyList>

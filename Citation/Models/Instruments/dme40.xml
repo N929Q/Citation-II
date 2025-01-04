@@ -397,13 +397,14 @@
     </hovered>
   </animation>
 
-<!-- Panel Lights (only with Rembrandt disabled) -->
+<!-- Panel Lights (only for quality-level=0) -->
     <animation>
         <type>material</type>
         <condition>
-            <not>
-                <property>/sim/rendering/rembrandt/enabled</property>
-            </not>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
         </condition>
         <object-name>DME.bezel</object-name>
         <object-name>DME.dim.knob</object-name>
@@ -446,8 +447,8 @@
         <object-name>DME.glass</object-name>
     </effect>
 
-    <effect>
-        <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
         <object-name>DME.bezel</object-name>
         <object-name>DME.display</object-name>
         <object-name>DME.invalid</object-name>
@@ -466,6 +467,6 @@
         <object-name>DME.min1</object-name>
         <object-name>DME.min10</object-name>
         <object-name>DME.min100</object-name>
-    </effect>
+    </effect-->
 
 </PropertyList>

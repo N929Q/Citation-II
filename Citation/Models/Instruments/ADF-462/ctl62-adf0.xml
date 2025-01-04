@@ -1001,19 +1001,40 @@ the centers are:
         </hovered>
     </animation>
 
+<!-- Panel Lights (only for quality-level=0) -->
+    <animation>
+        <type>material</type>
+        <condition>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <object-name>ctl62.bezel</object-name>
+        <object-name>ctl62.metal</object-name>
+        <object-name>ctl62.toggle</object-name>
+        <emission>
+            <red>0.9</red>
+            <green>0.6</green>
+            <blue>0.4</blue>
+            <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
+        </emission>
+    </animation>
+
     <animation>
         <type>material</type>
         <texture alias="../../texture" />
         <object-name>ctl62.bezel</object-name>
     </animation>
 
-<!-- Panel Lights (only with Rembrandt disabled) -->
+<!-- Panel Lights (only for quality-level=0) -->
     <animation>
         <type>material</type>
         <condition>
-            <not>
-                <property>/sim/rendering/rembrandt/enabled</property>
-            </not>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
         </condition>
         <object-name>ctl62.bezel</object-name>
         <object-name>ctl62.metal</object-name>
@@ -1027,7 +1048,6 @@ the centers are:
     </animation>
 
 <!-- Instrument Lights -->
-<!-- Implement emis animation even for Rembrandt rendering! -->
     <animation>
         <condition>
             <property>instrumentation/adf[0]/operable</property>
@@ -1045,7 +1065,7 @@ the centers are:
             <red>0.8</red>
             <green>0.8</green>
             <blue>0.7</blue>
-            <factor-prop>controls/lighting/flightdeck-average-instrument-emission</factor-prop>
+            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
         </emission>
     </animation>
 
@@ -1054,8 +1074,8 @@ the centers are:
         <object-name>ctl62.glass</object-name>
     </effect>
 
-    <effect>
-        <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
         <object-name>ctl62.bezel</object-name>
         <object-name>ctl62.metal</object-name>
         <object-name>ctl62.pwr</object-name>
@@ -1066,6 +1086,6 @@ the centers are:
         <object-name>ctl62.btn.act</object-name>
         <object-name>ctl62.btn.sto</object-name>
         <object-name>ctl62.btn.test</object-name>
-    </effect>
+    </effect-->
 
 </PropertyList>

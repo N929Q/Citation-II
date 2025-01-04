@@ -492,7 +492,7 @@ var init_electrical = func{
 ### cockpit lights
 
     append(lights_state, props.globals.getNode("controls/lighting/panel-lights-switch",0,"BOOL"));
-    append(lights_factor, props.globals.initNode("controls/lighting/instrument-lights-norm",0,"DOUBLE"));
+    append(lights_factor, props.globals.initNode("controls/lighting/instrument-light-norm",0,"DOUBLE"));
     append(lights_bus,"main-left");
     append(lights_input,"light-panel-el");
     append(lights_output,"");

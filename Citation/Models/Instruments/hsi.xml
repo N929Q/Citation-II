@@ -347,4 +347,72 @@
     </hovered>
   </animation>
 
+<!-- Panel Lights (only for quality-level=0) -->
+    <animation>
+        <type>material</type>
+        <condition>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <object-name>HSI</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
+        </emission>
+    </animation>
+
+<!-- Instrument Lights -->
+    <animation>
+        <type>material</type>
+        <object-name>HSI.card</object-name>
+        <object-name>HSI.crsdeflection</object-name>
+        <object-name>HSI.crsneedle</object-name>
+        <object-name>HSI.face</object-name>
+        <object-name>HSI.hdgbug</object-name>
+        <object-name>HSI.navbrg</object-name>
+        <object-name>HSI.crsknob</object-name>
+        <object-name>HSI.hdgknob</object-name>
+        <object-name>HSI.Plane.137</object-name>
+        <object-name>HSI.fromflag</object-name>
+        <object-name>HSI.gsneedle</object-name>
+        <object-name>HSI.navflag</object-name>
+        <object-name>HSI.toflag</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
+        </emission>
+    </animation>
+
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+        <object-name>HSI</object-name>
+        <object-name>HSI.card</object-name>
+        <object-name>HSI.crs1</object-name>
+        <object-name>HSI.crs10</object-name>
+        <object-name>HSI.crs100</object-name>
+        <object-name>HSI.crsdeflection</object-name>
+        <object-name>HSI.crsknob</object-name>
+        <object-name>HSI.crsneedle</object-name>
+        <object-name>HSI.dst0</object-name>
+        <object-name>HSI.dst1</object-name>
+        <object-name>HSI.dst10</object-name>
+        <object-name>HSI.dst100</object-name>
+        <object-name>HSI.dstoff</object-name>
+        <object-name>HSI.face</object-name>
+        <object-name>HSI.hdgbug</object-name>
+        <object-name>HSI.hdgknob</object-name>
+        <object-name>HSI.navbrg</object-name>
+        <object-name>HSI.Plane.137</object-name>
+        <object-name>HSI.fromflag</object-name>
+        <object-name>HSI.gsneedle</object-name>
+        <object-name>HSI.navflag</object-name>
+        <object-name>HSI.toflag</object-name>
+    </effect-->
+
 </PropertyList>

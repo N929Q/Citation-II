@@ -654,4 +654,61 @@
         </hovered>
     </animation>
 
+<!-- Panel Lights (only for quality-level=0) -->
+    <animation>
+        <type>material</type>
+        <condition>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <object-name>AudioPnl</object-name>
+        <object-name>AudioPnl.volume</object-name>
+        <object-name>AudioPnl.knob1</object-name>
+        <object-name>AudioPnl.knob2</object-name>
+        <object-name>AudioPnl.marker</object-name>
+        <object-name>AudioPnl.comm1</object-name>
+        <object-name>AudioPnl.comm2</object-name>
+        <object-name>AudioPnl.warn</object-name>
+        <object-name>AudioPnl.adf1</object-name>
+        <object-name>AudioPnl.adf2</object-name>
+        <object-name>AudioPnl.dme1</object-name>
+        <object-name>AudioPnl.dme2</object-name>
+        <object-name>AudioPnl.nav1</object-name>
+        <object-name>AudioPnl.nav2</object-name>
+        <object-name>AudioPnl.resv0</object-name>
+        <object-name>AudioPnl.resv1</object-name>
+        <object-name>AudioPnl.resv2</object-name>
+        <object-name>AudioPnl.mute</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
+        </emission>
+    </animation>
+
+    <!--effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+        <object-name>AudioPnl</object-name>
+        <object-name>AudioPnl.volume</object-name>
+        <object-name>AudioPnl.knob1</object-name>
+        <object-name>AudioPnl.knob2</object-name>
+        <object-name>AudioPnl.marker</object-name>
+        <object-name>AudioPnl.comm1</object-name>
+        <object-name>AudioPnl.comm2</object-name>
+        <object-name>AudioPnl.warn</object-name>
+        <object-name>AudioPnl.adf1</object-name>
+        <object-name>AudioPnl.adf2</object-name>
+        <object-name>AudioPnl.dme1</object-name>
+        <object-name>AudioPnl.dme2</object-name>
+        <object-name>AudioPnl.nav1</object-name>
+        <object-name>AudioPnl.nav2</object-name>
+        <object-name>AudioPnl.resv0</object-name>
+        <object-name>AudioPnl.resv1</object-name>
+        <object-name>AudioPnl.resv2</object-name>
+        <object-name>AudioPnl.mute</object-name>
+    </effect-->
+
 </PropertyList>
