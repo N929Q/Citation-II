@@ -1554,6 +1554,41 @@
         </emission>
     </animation>
 
+<!-- green lights off
+  <animation>
+    <type>material</type>
+    <condition>
+      <not>
+        <property>/sim/rendering/rembrandt/enabled</property>
+      </not>
+    </condition>
+    <object-name>elec.ign.left.led</object-name>
+    <object-name>elec.ign.right.led</object-name>
+    <emission>
+      <red>0.0</red>
+      <green>0.3</green>
+      <blue>0.0</blue>
+      <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
+    </emission>
+  </animation>
+ -->
+<!-- red lights off
+  <animation>
+    <type>material</type>
+    <condition>
+      <not>
+        <property>/sim/rendering/rembrandt/enabled</property>
+      </not>
+    </condition>
+    <object-name>elec.test.led</object-name>
+    <emission>
+      <red>0.3</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+      <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
+    </emission>
+  </animation>
+ -->
 <!-- Instrument Lights -->
     <animation>
         <type>material</type>
@@ -1571,46 +1606,52 @@
         </emission>
     </animation>
 
-    <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
-        <object-name>elec.glass</object-name>
-    </effect>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>elec.glass</object-name>
+  </effect>
 
-    <!--effect>
-        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
-        <object-name>elec.panel</object-name>
-        <object-name>elec.volt.knob</object-name>
-        <object-name>elec.test.knob</object-name>
-        <object-name>elec.test.led</object-name>
-        <object-name>elec.fuel.knob</object-name>
-        <object-name>elec.batt.sw</object-name>
-        <object-name>elec.gen.left.sw</object-name>
-        <object-name>elec.gen.right.sw</object-name>
-        <object-name>elec.inv.sw</object-name>
-        <object-name>elec.avionics.sw</object-name>
-        <object-name>elec.ign.left.sw</object-name>
-        <object-name>elec.ign.left.led</object-name>
-        <object-name>elec.ign.right.sw</object-name>
-        <object-name>elec.ign.right.led</object-name>
-        <object-name>elec.starter.left</object-name>
-        <object-name>elec.starter.right</object-name>
-        <object-name>elec.starter.off</object-name>
-        <object-name>elec.starter.off</object-name>
-        <object-name>elec.fuel.left.sw</object-name>
-        <object-name>elec.fuel.right.sw</object-name>
-        <object-name>elec.antiice.pitot.sw</object-name>
-        <object-name>elec.antiice.bleed.sw</object-name>
-        <object-name>elec.antiice.alcohol.sw</object-name>
-        <object-name>elec.antiice.eng.left.sw</object-name>
-        <object-name>elec.antiice.eng.right.sw</object-name>
-        <object-name>elec.antiice.surface.sw</object-name>
-        <object-name>elec.gyro.vert.sw</object-name>
-        <object-name>elec.gyro.mode.sw</object-name>
-        <object-name>elec.gyro.set.sw</object-name>
-        <object-name>elec.recog.sw</object-name>
-        <object-name>elec.strobe.sw</object-name>
-        <object-name>elec.nav.sw</object-name>
-        <object-name>elec.wing.sw</object-name>
-    </effect-->
+  <effect>
+    <condition>
+      <greater-than>
+        <property>/sim/version/flightgear</property>
+        <value>3.4.999</value>
+      </greater-than>
+    </condition>
+    <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
+    <object-name>elec.panel</object-name>
+    <object-name>elec.volt.knob</object-name>
+    <object-name>elec.test.knob</object-name>
+    <object-name>elec.test.led</object-name>
+    <object-name>elec.fuel.knob</object-name>
+    <object-name>elec.batt.sw</object-name>
+    <object-name>elec.gen.left.sw</object-name>
+    <object-name>elec.gen.right.sw</object-name>
+    <object-name>elec.inv.sw</object-name>
+    <object-name>elec.avionics.sw</object-name>
+    <object-name>elec.ign.left.sw</object-name>
+    <object-name>elec.ign.left.led</object-name>
+    <object-name>elec.ign.right.sw</object-name>
+    <object-name>elec.ign.right.led</object-name>
+    <object-name>elec.starter.left</object-name>
+    <object-name>elec.starter.right</object-name>
+    <object-name>elec.starter.off</object-name>
+    <object-name>elec.starter.off</object-name>
+    <object-name>elec.fuel.left.sw</object-name>
+    <object-name>elec.fuel.right.sw</object-name>
+    <object-name>elec.antiice.pitot.sw</object-name>
+    <object-name>elec.antiice.bleed.sw</object-name>
+    <object-name>elec.antiice.alcohol.sw</object-name>
+    <object-name>elec.antiice.eng.left.sw</object-name>
+    <object-name>elec.antiice.eng.right.sw</object-name>
+    <object-name>elec.antiice.surface.sw</object-name>
+    <object-name>elec.gyro.vert.sw</object-name>
+    <object-name>elec.gyro.mode.sw</object-name>
+    <object-name>elec.gyro.set.sw</object-name>
+    <object-name>elec.recog.sw</object-name>
+    <object-name>elec.strobe.sw</object-name>
+    <object-name>elec.nav.sw</object-name>
+    <object-name>elec.wing.sw</object-name>
+  </effect>
 
 </PropertyList>

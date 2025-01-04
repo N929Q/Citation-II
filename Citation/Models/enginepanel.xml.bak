@@ -777,14 +777,13 @@
     </axis>
   </animation>
 
-<!-- Panel Lights (only with quality=0) -->
+<!-- Panel Lights (only with Rembrandt disabled) -->
     <animation>
         <type>material</type>
         <condition>
-            <equals>
-                <property>/sim/rendering/shaders/quality-level</property>
-                <value>0</value>
-            </equals>
+            <not>
+                <property>/sim/rendering/rembrandt/enabled</property>
+            </not>
         </condition>
         <object-name>panel.eng.bezel</object-name>
         <object-name>panel.eng.hole</object-name>
@@ -799,6 +798,7 @@
     </animation>
 
 <!-- Instrument Lights -->
+<!-- Implement emis animation even for Rembrandt rendering! -->
     <animation>
         <type>material</type>
         <object-name>panel.eng.gauge</object-name>
@@ -815,10 +815,10 @@
         <object-name>panel.eng.oilp1</object-name>
         <object-name>panel.eng.oilp2</object-name>
         <emission>
-            <red>1.0</red>
+            <red>1</red>
             <green>0.8</green>
             <blue>0.6</blue>
-            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
+            <factor-prop>controls/lighting/flightdeck-average-instrument-emission</factor-prop>
         </emission>
     </animation>
 
@@ -829,19 +829,13 @@
     </effect>
 
 <!-- cockpit shadows -->
-    <!--effect>
-        <condition>
-            <equals>
-                <property>/sim/rendering/shaders/quality-level</property>
-                <value>0</value>
-            </equals>
-        </condition>
-        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+    <effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
         <object-name>panel.eng.bezel</object-name>
         <object-name>panel.eng.gauge</object-name>
         <object-name>panel.eng.hole</object-name>
         <object-name>panel.eng.trbn1led</object-name>
         <object-name>panel.eng.trbn2led</object-name>
-    </effect-->
+    </effect>
 
 </PropertyList>
