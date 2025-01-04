@@ -128,40 +128,54 @@
     </hovered>
   </animation>
 
-  <!-- Panel Lights (only with Rembrandt disabled) -->
-  <animation>
-    <type>material</type>
-    <condition>
-      <not>
-        <property>/sim/rendering/rembrandt/enabled</property>
-      </not>
-    </condition>
-    <object-name>altalerter.bezel</object-name>
-    <object-name>altalerter.select</object-name>
-    <object-name>altalerter.set</object-name>
-    <object-name>altalerter.dim</object-name>
-    <emission>
-      <red>1.0</red>
-      <green>0.8</green>
-      <blue>0.6</blue>
-      <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
-    </emission>
-  </animation>
+<!-- Panel Lights (only for quality-level=0) -->
+    <animation>
+        <type>material</type>
+        <condition>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
+        </condition>
+        <object-name>alt.bezel</object-name>
+        <object-name>alt.knob</object-name>
+        <object-name>alt.warn</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/panel-average-lighting</factor-prop>
+        </emission>
+    </animation>
 
-  <!-- dimmable lights -->
-  <!-- Implement emis animation even for Rembrandt rendering! -->
-  <animation>
-    <type>material</type>
-    <object-name>altalerter.digit100</object-name>
-    <object-name>altalerter.digit10</object-name>
-    <object-name>altalerter.digit1</object-name>
-    <emission>
-      <red>1.0</red>
-      <green>1.0</green>
-      <blue>1.0</blue>
-      <factor-prop>controls/lighting/altitude-alerter-dim</factor-prop>
-    </emission>
-  </animation>
+<!-- Instrument Lights -->
+    <animation>
+        <type>material</type>
+        <object-name>alt.face</object-name>
+        <object-name>alt.needle</object-name>
+        <object-name>alt.invalid</object-name>
+        <object-name>alt.10</object-name>
+        <object-name>alt.100</object-name>
+        <object-name>alt.1000</object-name>
+        <object-name>alt.1000.low</object-name>
+        <object-name>alt.10000</object-name>
+        <object-name>alt.10000.low</object-name>
+        <object-name>alt.neg</object-name>
+        <object-name>alt.inhg01</object-name>
+        <object-name>alt.inhg02</object-name>
+        <object-name>alt.inhg03</object-name>
+        <object-name>alt.inhg04</object-name>
+        <object-name>alt.hpa01</object-name>
+        <object-name>alt.hpa02</object-name>
+        <object-name>alt.hpa03</object-name>
+        <object-name>alt.hpa04</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0.8</green>
+            <blue>0.6</blue>
+            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
+        </emission>
+    </animation>
 
   <effect>
     <condition>
