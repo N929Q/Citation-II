@@ -564,37 +564,43 @@
   </effect>
 -->
 <!-- Chrome Effect! -->
-    <effect>
-        <condition>
-            <not>
-                <property>/sim/rendering/shaders/skydome</property>
-                <value>1</value>
-            </not>
-        </condition>
-        <inherits-from>Aircraft/Citation/Models/Effects/chrome-flightdeck</inherits-from>
-        <object-name>lighting.light.sw</object-name>
-        <object-name>lighting.stdbygyro.sw</object-name>
-        <object-name>lighting.passenger.sw</object-name>
-        <object-name>lighting.beacon.sw</object-name>
-        <object-name>lighting.landing.left.sw</object-name>
-        <object-name>lighting.landing.right.sw</object-name>
-    </effect>
+  <effect>
+    <condition>
+      <not>
+        <property>/sim/rendering/shaders/skydome</property>
+        <value>1</value>
+      </not>
+    </condition>
+    <inherits-from>Aircraft/Citation/Models/Effects/citationII-chrome-interior</inherits-from>
+    <object-name>lighting.light.sw</object-name>
+    <object-name>lighting.stdbygyro.sw</object-name>
+    <object-name>lighting.passenger.sw</object-name>
+    <object-name>lighting.beacon.sw</object-name>
+    <object-name>lighting.landing.left.sw</object-name>
+    <object-name>lighting.landing.right.sw</object-name>
+  </effect>
 
-    <!--effect>
-        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
-        <object-name>lighting.panel</object-name>
-        <object-name>lighting.flood.knob</object-name>
-        <object-name>lighting.left.knob</object-name>
-        <object-name>lighting.center.knob</object-name>
-        <object-name>lighting.right.knob</object-name>
-        <object-name>lighting.el.knob</object-name>
-        <object-name>lighting.light.sw</object-name>
-        <object-name>lighting.stdbygyro.sw</object-name>
-        <object-name>lighting.passenger.sw</object-name>
-        <object-name>lighting.beacon.sw</object-name>
-        <object-name>lighting.landing.left.sw</object-name>
-        <object-name>lighting.landing.right.sw</object-name>
-    </effect-->
+  <effect>
+    <condition>
+      <greater-than>
+        <property>/sim/version/flightgear</property>
+        <value>3.4.999</value>
+      </greater-than>
+    </condition>
+    <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
+    <object-name>lighting.panel</object-name>
+    <object-name>lighting.flood.knob</object-name>
+    <object-name>lighting.left.knob</object-name>
+    <object-name>lighting.center.knob</object-name>
+    <object-name>lighting.right.knob</object-name>
+    <object-name>lighting.el.knob</object-name>
+    <object-name>lighting.light.sw</object-name>
+    <object-name>lighting.stdbygyro.sw</object-name>
+    <object-name>lighting.passenger.sw</object-name>
+    <object-name>lighting.beacon.sw</object-name>
+    <object-name>lighting.landing.left.sw</object-name>
+    <object-name>lighting.landing.right.sw</object-name>
+  </effect>
 
 </PropertyList>
 

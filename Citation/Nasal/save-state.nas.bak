@@ -86,8 +86,6 @@ var citation_array_radios = [
   "/instrumentation/rmi[1]/double-needle/position-deg",
   "/instrumentation/rmi[1]/double-needle/selected-input",
   "/autopilot/settings/heading-bug-deg",
-  "/autopilot/ms-205[0]/panel/dim",
-  "/autopilot/ms-205[1]/panel/dim",
   "/controls/lighting/flood-light-norm",
   "/controls/lighting/left-panel-norm",
   "/controls/lighting/center-panel-norm",

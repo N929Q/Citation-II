@@ -545,7 +545,7 @@ the centers are:
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-power</tooltip-id>
-                <label>Comm1: %s</label>
+                <label>Comm2: %s</label>
                 <property>instrumentation/ctl22[1]/power-knob</property>
                 <mapping>nasal</mapping>
                 <script>
@@ -573,7 +573,7 @@ the centers are:
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-vol</tooltip-id>
-                <label>Comm1 volume: %d%%</label>
+                <label>Comm2 volume: %d%%</label>
                 <property>instrumentation/comm[1]/volume-def</property>
                 <mapping>percent</mapping>
             </binding>
@@ -724,7 +724,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-freq</tooltip-id>
-                <label>Comm1 frequency: %.3f MHz</label>
+                <label>Comm2 frequency: %.3f MHz</label>
                 <property>instrumentation/comm[1]/frequencies/standby-mhz</property>
             </binding>
             <binding>
@@ -736,7 +736,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-freq</tooltip-id>
-                <label>Comm1 frequency: %.3f MHz</label>
+                <label>Comm2 frequency: %.3f MHz</label>
                 <property>instrumentation/comm[1]/frequencies/selected-mhz</property>
             </binding>
         </hovered>
@@ -845,7 +845,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-freq</tooltip-id>
-                <label>Comm1 frequency: %.3f MHz</label>
+                <label>Comm2 frequency: %.3f MHz</label>
                 <property>instrumentation/comm[1]/frequencies/standby-mhz</property>
             </binding>
             <binding>
@@ -857,7 +857,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-freq</tooltip-id>
-                <label>Comm1 frequency: %.3f MHz</label>
+                <label>Comm2 frequency: %.3f MHz</label>
                 <property>instrumentation/comm[1]/frequencies/selected-mhz</property>
             </binding>
         </hovered>
@@ -989,7 +989,7 @@ the centers are:
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-toggle</tooltip-id>
-                <label>Comm1 swap frequencies</label>
+                <label>Comm2 swap frequencies</label>
             </binding>
         </hovered>
     </animation>
@@ -1130,7 +1130,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-act</tooltip-id>
-                <label>Comm1 ACT: %s</label>
+                <label>Comm2 ACT: %s</label>
                 <property>instrumentation/ctl22[1]/mode</property>
                 <mapping>on-off</mapping>
             </binding>
@@ -1269,7 +1269,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>comm1-sto</tooltip-id>
-                <label>Comm1 store: %s</label>
+                <label>Comm2 store: %s</label>
                 <property>instrumentation/ctl22[1]/mem-mode</property>
                 <mapping>on-off</mapping>
             </binding>

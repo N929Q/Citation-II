@@ -562,7 +562,7 @@ Sascha Reißner
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-toggle</tooltip-id>
-                <label>NAV1 swap frequencies</label>
+                <label>NAV2 swap frequencies</label>
             </binding>
         </hovered>
     </animation>
@@ -697,7 +697,7 @@ Sascha Reißner
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-power</tooltip-id>
-                <label>NAV1: %s</label>
+                <label>NAV2: %s</label>
                 <property>instrumentation/ctl32[1]/power-knob</property>
                 <mapping>nasal</mapping>
                 <script>
@@ -736,7 +736,7 @@ Sascha Reißner
             <binding>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-vol</tooltip-id>
-                <label>NAV1 volume: %d%%</label>
+                <label>NAV2 volume: %d%%</label>
                 <property>instrumentation/nav[1]/volume</property>
                 <mapping>percent</mapping>
             </binding>
@@ -823,7 +823,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-freq</tooltip-id>
-                <label>NAV1 frequency: %.3f MHz</label>
+                <label>NAV2 frequency: %.3f MHz</label>
                 <property>instrumentation/nav[1]/frequencies/standby-mhz</property>
             </binding>
             <binding>
@@ -835,7 +835,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-freq</tooltip-id>
-                <label>NAV1 frequency: %.3f MHz</label>
+                <label>NAV2 frequency: %.3f MHz</label>
                 <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
             </binding>
         </hovered>
@@ -911,7 +911,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-freq</tooltip-id>
-                <label>NAV1 frequency: %.3f MHz</label>
+                <label>NAV2 frequency: %.3f MHz</label>
                 <property>instrumentation/nav[1]/frequencies/standby-mhz</property>
             </binding>
             <binding>
@@ -923,7 +923,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-freq</tooltip-id>
-                <label>NAV1 frequency: %.3f MHz</label>
+                <label>NAV2 frequency: %.3f MHz</label>
                 <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
             </binding>
         </hovered>
@@ -956,7 +956,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-act</tooltip-id>
-                <label>NAV1 ACT: %s</label>
+                <label>NAV2 ACT: %s</label>
                 <property>instrumentation/ctl32[1]/mode</property>
                 <mapping>on-off</mapping>
             </binding>
@@ -1065,7 +1065,7 @@ the centers are:
                 </condition>
                 <command>set-tooltip</command>
                 <tooltip-id>nav1-sto</tooltip-id>
-                <label>NAV1 store: %s</label>
+                <label>NAV2 store: %s</label>
                 <property>instrumentation/ctl32[1]/mem-mode</property>
                 <mapping>on-off</mapping>
             </binding>
