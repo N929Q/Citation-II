@@ -90,7 +90,7 @@ var citation_array_radios = [
   "/controls/lighting/left-panel-norm",
   "/controls/lighting/center-panel-norm",
   "/controls/lighting/right-panel-norm",
-  "/controls/lighting/instrument-lights-norm",
+  "/controls/lighting/instrument-light-norm",
   "/controls/lighting/fdpanel-dim",
   "/controls/lighting/altitude-alerter-dim",
 ];
