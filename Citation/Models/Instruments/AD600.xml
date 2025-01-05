@@ -335,14 +335,13 @@
     </animation>
 
     <effect>
-        <!--inherits-from>Effects/model-transparent</inherits-from-->
-        <inherits-from>Aircraft/Citation/Models/Effects/reflection-glass</inherits-from>
-        <object-name>AD600.glass</object-name>
-        <object-name>AD600.pipe</object-name>
-    </effect>
-
-    <!--effect>
-        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+        <condition>
+            <greater-than>
+                <property>/sim/version/flightgear</property>
+                <value>3.4.999</value>
+            </greater-than>
+        </condition>
+        <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
         <object-name>AD600.housing</object-name>
         <object-name>AD600.testknob</object-name>
         <object-name>AD600.ball</object-name>
@@ -363,6 +362,12 @@
         <object-name>AD600.needle.rt</object-name>
         <object-name>AD600.runway</object-name>
         <object-name>AD600.slipball</object-name>
-    </effect-->
+    </effect>
+
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>AD600.glass</object-name>
+        <object-name>AD600.pipe</object-name>
+    </effect>
 
 </PropertyList>
