@@ -1125,8 +1125,8 @@ the centers are:
         <object-name>ctl32.glass</object-name>
     </effect>
 
-    <!--effect>
-        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+    <effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
         <object-name>ctl32.bezel</object-name>
         <object-name>ctl32.metal</object-name>
         <object-name>ctl32.pwr</object-name>
@@ -1137,6 +1137,6 @@ the centers are:
         <object-name>ctl32.btn.act</object-name>
         <object-name>ctl32.btn.sto</object-name>
         <object-name>ctl32.btn.test</object-name>
-    </effect-->
+    </effect>
 
 </PropertyList>

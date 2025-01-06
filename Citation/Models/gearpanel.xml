@@ -265,13 +265,14 @@
         <object-name>panel.gear.antiskid.sw.pivot</object-name>
     </effect>
 
-<!-- Panel Lights (only with Rembrandt disabled) -->
+<!-- Panel Lights (only with quality=0) -->
     <animation>
         <type>material</type>
         <condition>
-            <not>
-                <property>/sim/rendering/rembrandt/enabled</property>
-            </not>
+            <equals>
+                <property>/sim/rendering/shaders/quality-level</property>
+                <value>0</value>
+            </equals>
         </condition>
         <object-name>panel.gear</object-name>
         <object-name>panel.gear.lever</object-name>

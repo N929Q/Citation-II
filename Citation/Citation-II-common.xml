@@ -185,7 +185,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <internal type="bool">true</internal>
       <config>
         <x-offset-m type="double">-0.31</x-offset-m>
-        <y-offset-m type="double">1.02</y-offset-m>
+        <y-offset-m type="double">1.00</y-offset-m>
         <z-offset-m type="double">3.27</z-offset-m>
         <default-field-of-view-deg>80.0</default-field-of-view-deg>
         <pitch-offset-deg>-10.5</pitch-offset-deg>
@@ -279,7 +279,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <type>lookfrom</type>
       <config>
         <x-offset-m type="double">0.31</x-offset-m> <!--Right-->
-        <y-offset-m type="double">1.02</y-offset-m> <!--Up-->
+        <y-offset-m type="double">1.00</y-offset-m> <!--Up-->
         <z-offset-m type="double">3.27</z-offset-m> <!--Back-->
         <default-field-of-view-deg>80.0</default-field-of-view-deg>
         <pitch-offset-deg>-13</pitch-offset-deg>

@@ -436,30 +436,9 @@
         </emission>
     </animation>
 
-<!-- glass effect -->
-    <effect>
-        <!--inherits-from>Effects/model-transparent</inherits-from-->
-        <inherits-from>Aircraft/Citation/Models/Effects/reflection-glass</inherits-from>
-        <object-name>fire.shutoff.left.cover</object-name>
-        <object-name>fire.shutoff.right.cover</object-name>
-    </effect>
-
-<!-- Chrome Effect! -->
-    <effect>
-        <inherits-from>Aircraft/Citation/Models/Effects/chrome-flightdeck</inherits-from>
-        <object-name>rev.left.emer-sw</object-name>
-        <object-name>rev.right.emer-sw</object-name>
-    </effect>
-
 <!-- cockpit shadows -->
-    <!--effect>
-        <condition>
-            <equals>
-                <property>/sim/rendering/shaders/quality-level</property>
-                <value>0</value>
-            </equals>
-        </condition>
-        <inherits-from>Aircraft/Citation/Models/Effects/shadow-flightdeck</inherits-from>
+    <effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/interior-shadow/citationII-interior-flightdeck</inherits-from>
         <object-name>fire.panel</object-name>
         <object-name>fire.shutoff.left.btn</object-name>
         <object-name>fire.shutoff.right.btn</object-name>
@@ -470,6 +449,20 @@
         <object-name>rev.left.arm</object-name>
         <object-name>rev.left.unlock</object-name>
         <object-name>rev.left.deploy</object-name>
-    </effect-->
+    </effect>
+
+<!-- Chrome Effect! -->
+    <effect>
+        <inherits-from>Aircraft/Citation/Models/Effects/citationII-chrome-interior</inherits-from>
+        <object-name>rev.left.emer-sw</object-name>
+        <object-name>rev.right.emer-sw</object-name>
+    </effect>
+
+<!-- glass effect -->
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>fire.shutoff.left.cover</object-name>
+        <object-name>fire.shutoff.right.cover</object-name>
+    </effect>
 
 </PropertyList>
