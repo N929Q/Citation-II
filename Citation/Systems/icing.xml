@@ -45,11 +45,11 @@
           <or>
             <greater-than>
               <property>engines/engine[0]/egt-degf</property>
-              <value>280</value>
+              <value>0</value>
             </greater-than>
             <greater-than>
               <property>engines/engine[1]/egt-degf</property>
-              <value>280</value>
+              <value>0</value>
             </greater-than>
           </or>
         </and>
@@ -75,11 +75,11 @@
           <or>
             <greater-than>
               <property>engines/engine[0]/egt-degf</property>
-              <value>280</value>
+              <value>0</value>
             </greater-than>
             <greater-than>
               <property>engines/engine[1]/egt-degf</property>
-              <value>280</value>
+              <value>0</value>
             </greater-than>
           </or>
         </and>

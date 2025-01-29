@@ -11,6 +11,7 @@
     </input>
     <output>
       <property>systems/electrical/outputs/nav[0]</property>
+      <property>/systems/electrical/outputs/fg1000-mfd</property>
     </output>
   </filter>
 

@@ -61,17 +61,29 @@
       <z-m>0</z-m>
     </offsets>
   </model>
-
+	
   <model>
     <name>magnetic-compass</name>
     <path>Aircraft/Citation/Models/Instruments/magcompass.xml</path>
     <offsets>
-      <x-m>2.460</x-m>
+      <x-m>2.450</x-m>
       <y-m>0</y-m>
-      <z-m>0.885</z-m>
+      <z-m>0.875</z-m>
+      <pitch-deg>-6.0</pitch-deg>
     </offsets>
   </model>
-
+	<!--
+  <model>
+	<name>Compass</name>
+	<path>Aircraft/Citation/Models/Instruments/Compass/Compass.xml</path>
+	<offsets>
+		<x-m>2.670</x-m>
+		<y-m>-0.00</y-m>
+		<z-m>1.085</z-m>
+		<pitch-deg>0.00</pitch-deg>
+	</offsets>
+  </model>  
+	-->
   <model>
     <name>CDU</name>
     <path>Aircraft/Citation/Models/Instruments/cdu/boeing.xml</path>
