@@ -1,5 +1,27 @@
 <PropertyList>
 
+	<animation>
+	  <type>material</type>
+	  <object-name>lightingpanel</object-name>
+        <emission>
+            <red>0.16</red>
+            <green>0.14</green>
+            <blue>0.12</blue>
+            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
+        </emission>		
+	</animation>
+	
+	<animation>
+	  <type>material</type>
+	  <object-name>electricpanel</object-name>
+        <emission>
+            <red>0.06</red>
+            <green>0.04</green>
+            <blue>0.02</blue>
+            <factor-prop>controls/lighting/instrument-light-emission</factor-prop>
+        </emission>		
+	</animation>	
+
     <model>
         <name>electricpanel</name>
         <path>Aircraft/Citation/Models/Instruments/electricpanel.xml</path>
@@ -575,5 +597,25 @@
             <z-m>0.150</z-m>
         </offsets>
     </model>
-
+    
+    <!--
+	<model>
+		<path>/Aircraft/Instruments-3d/FG1000/GDU104X/GDU-1044B.1.xml</path>
+		<name>MFD</name>
+		<offsets>
+            <x-m>0.002</x-m>
+            <y-m>-0.129</y-m>
+            <z-m>0.207</z-m>
+			<pitch-deg>-0</pitch-deg>
+		</offsets>
+	</model>
+	
+    <animation>
+      <type>scale</type>
+      <object-name>MFD</object-name>
+      <x-offset>1</x-offset>
+      <y-offset>0.595</y-offset>
+      <z-offset>0.72</z-offset>
+    </animation>    
+	-->
 </PropertyList>
