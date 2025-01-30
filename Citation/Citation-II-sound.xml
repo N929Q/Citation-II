@@ -152,7 +152,7 @@
 
     <gear>
         <name>gear</name>
-        <path>Aircraft/Citation/Sounds/gear-warn.wav</path>
+        <path>Aircraft/Citation/Sounds/gear2.wav</path>
         <condition>
             <property>systems/hydraulic/valves/gear/state</property>
         </condition>
@@ -200,7 +200,7 @@
     <gear>
         <name>gear-horn</name>
         <type>avionics</type>
-        <path>Aircraft/Citation/Sounds/gear-hrn.wav</path>
+        <path>Aircraft/Citation/Sounds/gear-warn.wav</path>
         <condition>
             <property>controls/gear/warn-horn</property>
             <property>systems/electrical/outputs/main-left/warn-gear</property>
@@ -310,7 +310,7 @@
         <reference-dist>2.0</reference-dist>
         <max-dist>10.0</max-dist>
     </speedbrake>
-	<!--
+
     <wind>
         <name>wind</name>
         <path>Aircraft/Citation/Sounds/wind.wav</path>
@@ -335,7 +335,7 @@
         <reference-dist>100.1</reference-dist>
         <max-dist>5.00</max-dist>
     </wind>
-			-->
+
     <click>
         <name>click1</name>
         <type>avionics</type>
