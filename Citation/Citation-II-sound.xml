@@ -23,8 +23,8 @@
             <factor>0.01</factor>
         </pitch>
         <position>
-            <x>10.30</x>
-            <y>-1.29</y>
+            <x>3.30</x>
+            <y>1.29</y>
             <z>0.78</z>
         </position>
         <reference-dist>10.0</reference-dist>
@@ -50,8 +50,8 @@
             <factor>0.01</factor>
         </pitch>
         <position>
-            <x>10.30</x>
-            <y>1.29</y>
+            <x>3.30</x>
+            <y>-1.29</y>
             <z>0.78</z>
         </position>
         <reference-dist>10.0</reference-dist>
