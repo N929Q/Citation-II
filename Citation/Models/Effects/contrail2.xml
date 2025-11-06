@@ -22,7 +22,7 @@
         </greater-than>
         <less-than>
           <property>environment/temperature-degc</property>
-          <value>-40</value>
+          <value>-45</value>
         </less-than>
       </and>
     </condition>
